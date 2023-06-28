@@ -1,0 +1,23 @@
+<head>
+    <a href="{% url 'store:estoquecreate' %}"></a>
+    <div class="py-20" xmlns="http://www.w3.org/1999/html"></div>
+    <h1 class="w-full flex justify-center font-semibold text-4xl md:text-5xl w-12/18 md:w-3/4 text-center">
+     <hr>Homeestoque</h1>
+
+</head>
+<body>
+<h1>Cadastro de Produtos</h1>
+<form method="post" action="store:estoquecreate"> <save></save>
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <a href="{% url 'store:estoquecreate' %}"> Novo cadastro </a>
+        <input type="submit" id="store:estoquecreate" value="Salvar" class='bg-red-500 btn btn-sucess'>
+        <input type="reset" value="Cancelar" onclick="location.href = '{% url 'store:estoquelist' %}'" class="bg-red-500 btn btn-sucess">
+        <input type="reset" value="Voltar" onclick="location.href = '{% url 'store:homestore' %}'" class="bg-red-500 btn btn-sucess">
+    </form>
+</body>
+
+
+</html>

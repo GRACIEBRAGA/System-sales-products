@@ -1,0 +1,25 @@
+
+<head>
+    <a href="{% url 'store:vendacreate' %}"></a>
+    <div class="py-20" xmlns="http://www.w3.org/1999/html"></div>
+    <h1 class="w-full flex justify-center font-semibold text-4xl md:text-5xl w-12/18 md:w-3/4 text-center">
+     <hr>HomeVenda</h1>
+
+</head>
+
+<body>
+<h1>Vendas de Mercadorias</h1>
+<form method="post" action="store:vendacreate">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <a href="{% url 'store:vendacreate' %}"> Novo venda</a>
+        <input type="submit" id="store_vendacreate" value="Salvar" class='bg-red-500 btn btn-sucess'>
+        <input type="reset" value="Cancelar" onclick="location.href = '{% url 'store:vendalist' %}'" class="bg-red-500 btn btn-sucess">
+        <input type="reset" value="Voltar" onclick="location.href = '{% url 'store:homestore' %}'" class="bg-red-500 btn btn-sucess">
+     </form>
+</body>
+
+
+</html>

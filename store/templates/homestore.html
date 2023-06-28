@@ -1,0 +1,58 @@
+
+{% load static %}
+
+{% block titulo %}
+HomeStore SystemPDV
+{% endblock %}
+
+
+<div class="py-20">
+
+    <h1>Homestore</h1>
+
+<section class='w-full flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 60vh;">
+        <div class='md:w-2/3 flex justify-center items-center '>
+            <a href="/vendacreate">
+                <img src="{% static 'image/vendas.jpeg' %}"  alt="Upvote">
+            </a>
+        </div>
+
+
+    <div class="w-full flex items-center py-3 px-4 z-50">
+    <div class="w-4/8">
+        <a href="/estoque">
+            <img class="w-10/12" src="{% static 'image/produtos.jpeg' %}">
+        </a>
+    </div>
+
+    <div class='md:w-4/5 flex justify-center items-center '>
+             <a href="/clientecreate">
+                <img src="{% static 'image/cliente.jpeg' %}" class="w-10/12" alt="">
+            </a>
+        </div>
+
+    <div class='md:w-4/5 flex justify-center items-center '>
+            <a href="/fornecedor">
+            <img src="{% static 'image/fornecedor.jpeg' %}" class="w-10/12" alt="">
+            </a>
+        </div>
+
+    <div class='md:w-4/5 flex justify-center items-center '>
+            <a href="/compra">
+            <img src="{% static 'image/compra.jpeg' %}" class="w-10/12" alt="">
+            </a>
+        </div>
+
+    <div class='md:w-4/5 flex justify-center items-center '>
+            <a href="/notafiscal">
+            <img src="{% static 'image/notafiscal.jpeg' %}" class="w-10/12" alt="">
+            </a>
+        </div>
+    <section/>
+
+
+
+
+
+
+

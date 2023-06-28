@@ -1,0 +1,24 @@
+
+<head>
+    <a href="{% url 'store:clientecreate' %}"></a>
+    <div class="py-20" xmlns="http://www.w3.org/1999/html"></div>
+    <h1 class="w-full flex justify-center font-semibold text-4xl md:text-5xl w-12/18 md:w-3/4 text-center">
+     <hr>Lista de xxxxxxxx Cliente</h1>
+
+</head>
+<body>
+<input type="submit" onclick="location.href = '{% url 'store:clientecreate' %}'" value="Criar novo cliente" class="bg-red-500 btn btn-sucess">
+<ul>
+    {% for cliente in clientelist %}
+    <li>{{ cliente.nome }} - <a href="{% url 'store:clientecreate' %}">Editar</a>
+        <a href="{% url 'store:clientelist' %}">Visualizar</a>
+        <a href="{% url 'store:clientelist' %}">Apagar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+
+</body>
+
+
+</html>
